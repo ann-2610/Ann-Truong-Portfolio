@@ -1,0 +1,511 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #F5F5EC;
+    color: #494A42;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* COLOR PALLETTE */
+
+:root {
+    --main-black: #31393C;
+    --main-green: #C8D8AE;
+    --dark-green: #4A5F3A;
+    --light-green: #B4C0A3;
+    --main-white: #F5F5EC;
+}
+
+/* UNIVERSAL STYLES */
+
+h1 {
+    font-size: 4rem;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 2.2rem;
+    margin: 0px; 
+}
+
+p {
+    font-size: 2rem;
+    margin: 0px;
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* TOP NAVIGATION */
+
+nav {
+    width: 80%;
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+    margin: 40px auto;
+}
+
+.navContainer {
+    list-style-type: none;
+    height: fit-content;
+    display: flex;
+    margin-top: 0;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.navItem {
+    font-size: 2rem;
+    display: inline-block;
+    margin: auto 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    border-bottom: 5px solid #808E6A;
+}
+
+.logo {
+    width: 20%;
+    display: inline-block;
+}
+
+/* HERO SPACE */
+
+.heroSpace {
+    display: grid;
+    grid-template-columns: 10% 40% 10% 30% 10%;
+    grid-template-areas: ". heroContent . heroImageContainer .";
+}
+
+.heroContent {
+    grid-area: heroContent;
+    color: inherit;
+}
+
+.heroContent h1 {
+    margin-bottom: 2vh;
+}
+
+.heroContent p {
+    margin: 1.5vh auto;
+}
+
+.heroImageContainer {
+    grid-area: heroImageContainer;
+}
+
+.heroImage {
+    width: 100%;
+}
+
+.resumeButton, .viewCaseStudyButton {
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 24px 0 24px 0;
+    border: none;
+    background-color: var(--main-green);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.resumeButton:hover, .viewCaseStudyButton:hover {
+    background-color: var(--light-green);
+}
+
+/* MY WORK */
+
+.myWork {
+    margin: 3vh 10% 0px;
+}
+
+.projectPhoto {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 32px;
+}
+
+/* MY SKILLS */
+
+.mySkills li {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.mySkills {
+    margin: auto 10%;
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-columns: 40% 10% 25% 25%;
+    grid-template-areas: "skillsDescription . skills tools";
+}
+
+.skillsDescription {
+    grid-area: skillsDescription;
+}
+
+.skills {
+    grid-area: skills;
+    position: relative;
+}
+
+.tools {
+    grid-area: tools;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    right: 0;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 3vh;
+    background-color: var(--main-black);
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "getInTouch menuLinks socialMedia";
+    color: var(--main-white)
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+
+.menuLinks a {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--main-white);
+}
+
+.menuLinks a:hover {
+    text-decoration: underline;
+}
+
+.getInTouch {
+    grid-area: getInTouch;
+    margin-left: 80px;
+}
+
+.menuLinks {
+    grid-area: menuLinks;
+    margin: 0 auto;
+}
+
+.socialMedia {
+    grid-area: socialMedia;
+    text-align: right;
+    margin-right: 80px;
+}
+
+.socialIcon {
+    width: 60px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.email {
+    font-size: 2rem;
+}
+
+/* MOBILE SCREEN MEDIA QUERY */
+@media only screen and (max-width: 600px) {
+    .heroSpace {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-areas: ". heroContent ." ". heroImageContainer .";
+    }
+
+    .heroImage {
+        margin-top: 2vh;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+
+    footer h2 {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .menuLinks a {
+        font-size: 1.5rem;
+    }
+
+    .menuLinks a:hover {
+        text-decoration: underline;
+    }
+
+    .email {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        width: 90%;
+    }
+    .navContainer {
+        display: inline-flex;
+        text-align: right;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navItem {
+        font-size: 1.5rem;
+        display: inline-block;
+        width: fit-content;
+        padding: 12px 10px 5px;
+    }
+
+    .navItem:hover {
+        border-bottom: 4px solid #808E6A;
+    }
+
+    .mySkills {
+        margin: auto 5%;
+    }
+
+.text li {
+        font-size: 1.2rem;
+    }
+
+    .skillsContainer {
+        grid-gap: 2vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: "skillsDescription" "skills" "tools";
+    }
+    
+    .text {
+        position: relative;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas: "getInTouch" "menuLinks" "socialMedia";
+        padding: 5% 0px;
+        text-align: left;
+    }
+
+    .getInTouch, .menuLinks, .socialMedia {
+        margin: 12px 5%;
+    }
+
+    .socialMedia {
+        text-align: left;
+    }
+
+    .socialIcon {
+        margin-top: 12px;
+    }
+    
+    .project {
+        margin-bottom: 20px;
+    }
+    .myWork {
+        margin: 3vh 0px;
+    }
+
+    .myWork h2, .projectDescription {
+        margin: auto 5%;
+    }
+
+}
+
+/* TABLET MEDIA QUERY */
+
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .text li {
+        font-size: 1.4rem;
+    }
+
+    .navItem {
+        font-size: 1.8rem;
+    }
+
+    .socialIcon {
+        margin-top: 12px;
+    }
+
+    .getInTouch {
+        margin: 0px;
+    }
+
+    .menuLinks a {
+        font-size: 1.5rem;
+    }
+    footer {
+        grid-template-rows: 1fr;
+        grid-template-columns: 10% 40% 40%;
+        grid-template-areas: ". getInTouch menuLinks" ". socialMedia socialMedia";
+    }
+    .socialMedia {
+        text-align: left;
+    }    
+
+}
+
+/* BUTTON STYLE */
+
+.cta {
+    position: relative;
+    margin: 20px auto;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: var(--main-green);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  .cta button {
+    margin-top: 32px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 18px;
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+  }
+
+  .cta svg {
+    position: relative;
+    top: 18px;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: var(--dark-green);
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+    stroke: #F5F5EC;
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+
+  .wrapper {
+    width: 60px;
+    margin: 0 auto;
+  }
+  
+ .cta:hover button {
+    color: #F5F5EC;
+ }
+
+  /* HERO BUTTON */
+  
+  .hbtn {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    background-color: var(--main-green);
+    padding: 12px 32px;
+    text-align: center;
+    border: none;
+    border-radius: 24px 0 24px 0;
+    text-decoration: none;
+    color: var(--main-black);
+    white-space: nowrap;
+    z-index: 0;
+    font-size: 1.2rem;
+  }
+
+  
+  .hb-fill-right::before {
+    position: absolute;
+    content: "";
+    background: var(--dark-green);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: 0px auto auto 0px;
+    width: 0px;
+    height: 100%;
+    opacity: 1;
+  } 
+  
+  
+  .hb-fill-right:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  } 
+  
+  
+  .hb-fill-right:hover {
+    color: var(--main-white);
+    transition: color 0.3s ease 0s, background 0s ease 0.3s;
+  } 
+  
+  
