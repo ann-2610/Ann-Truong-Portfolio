@@ -4,7 +4,7 @@ $(document).ready(function() {
   
     // Hide the preloader when the page is fully loaded
     $(window).on('load', function() {
-        $('.preloader').fadeOut(1000, function() {
+        $('.preloader').fadeOut(2000, function() {
             // Show the content after preloader is hidden
             $('#content').show();
         });
