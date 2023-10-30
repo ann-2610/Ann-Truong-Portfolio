@@ -135,17 +135,30 @@ nav {
 
 .myWork {
     margin: 3vh 10% 0px;
+    height: 100%;
 }
 
-.projectPhoto {
-    width: 100%;
-    margin-top: 32px;
-    margin-bottom: 20px;
+.myWork h2 {
+    margin-bottom: 60px;
 }
-
 .project {
     margin-bottom: 32px;
 }
+
+.image-container {
+    overflow: hidden;
+    background-color: #cfcfcf5c;
+    text-align: center;
+}
+
+.enlargeImage {
+    transition: transform 0.2s;
+    width: 90%;
+}
+
+  .projectDescription {
+    margin-top: 60px;
+  }
 
 /* MY SKILLS */
 
@@ -188,7 +201,7 @@ nav {
 footer {
     margin-top: 3vh;
     background-color: var(--main-black);
-    padding: 40px 0px;
+    padding: 40px 10%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "getInTouch menuLinks socialMedia";
@@ -212,7 +225,6 @@ footer h2 {
 
 .getInTouch {
     grid-area: getInTouch;
-    margin-left: 80px;
 }
 
 .menuLinks {
@@ -223,7 +235,6 @@ footer h2 {
 .socialMedia {
     grid-area: socialMedia;
     text-align: right;
-    margin-right: 80px;
 }
 
 .socialIcon {
@@ -400,7 +411,7 @@ footer h2 {
 
 }
 
-/* BUTTON STYLE */
+/* MY WORK BUTTON */
 
 .cta {
     position: relative;
@@ -506,6 +517,19 @@ footer h2 {
   .hb-fill-right:hover {
     color: var(--main-white);
     transition: color 0.3s ease 0s, background 0s ease 0.3s;
-  } 
+  }
   
+  /* PRELOADER RUNNING AVOCADO */
+  #avocado {
+    width: 400px;   /* Viewport-width */
+    height: 300px;   /* Viewport-height */
+    margin: 2em auto;   /* Little margin */
+    background: transparent url('runningAvo.png') 0 0 no-repeat;   /* Sprite as the viewport background */
+    animation: runningAvo 01s steps(15) infinite; /* The Animation */
+  }
   
+  /* Animation keyframes for the sprite */
+  @keyframes runningAvo {
+    100% { background-position: 0 -4500px; }
+  }
+
